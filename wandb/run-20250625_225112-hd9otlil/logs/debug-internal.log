@@ -1,0 +1,7 @@
+{"time":"2025-06-25T22:51:13.176459943-04:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/aniemcz/gooseReno/wandb/run-20250625_225112-hd9otlil/logs/debug-core.log"}
+{"time":"2025-06-25T22:51:13.397805686-04:00","level":"INFO","msg":"stream: created new stream","id":"hd9otlil"}
+{"time":"2025-06-25T22:51:13.397833292-04:00","level":"INFO","msg":"stream: started","id":"hd9otlil"}
+{"time":"2025-06-25T22:51:13.397840851-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"hd9otlil"}
+{"time":"2025-06-25T22:51:13.398036495-04:00","level":"INFO","msg":"sender: started","stream_id":"hd9otlil"}
+{"time":"2025-06-25T22:51:13.398041103-04:00","level":"INFO","msg":"handler: started","stream_id":"hd9otlil"}
+{"time":"2025-06-25T22:51:13.520376045-04:00","level":"INFO","msg":"Starting system monitor"}

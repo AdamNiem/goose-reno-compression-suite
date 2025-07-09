@@ -1,0 +1,88 @@
+{
+  "os": "Linux-4.18.0-553.50.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "python": "CPython 3.10.14",
+  "startedAt": "2025-06-26T03:09:35.713127Z",
+  "args": [
+    "--training_data=/scratch/aniemcz/goose-reno/train/**/*.bin",
+    "--model_save_folder=/scratch/aniemcz/renoGooseModels/goose"
+  ],
+  "program": "/home/aniemcz/gooseReno/RENO/train.py",
+  "codePath": "RENO/train.py",
+  "email": "aniemcz@clemson.edu",
+  "root": "/home/aniemcz/gooseReno",
+  "host": "node0035.palmetto.clemson.edu",
+  "executable": "/home/aniemcz/gooseReno/.pixi/envs/default/bin/python",
+  "codePathLocal": "RENO/train.py",
+  "cpu_count": 40,
+  "cpu_count_logical": 40,
+  "gpu": "Tesla V100-PCIE-16GB",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "53660876800",
+      "used": "14000562176"
+    }
+  },
+  "memory": {
+    "total": "403757453312"
+  },
+  "cpu": {
+    "count": 40,
+    "countLogical": 40
+  },
+  "gpu_nvidia": [
+    {
+      "name": "Tesla V100-PCIE-16GB",
+      "memoryTotal": "17179869184",
+      "cudaCores": 5120,
+      "architecture": "Volta",
+      "uuid": "GPU-6b1d8671-dd61-50b1-87e3-e6b5f8b95830"
+    }
+  ],
+  "slurm": {
+    "cluster_name": "palmetto2",
+    "conf": "/var/spool/slurm/d/conf-cache/slurm.conf",
+    "cpus_on_node": "16",
+    "cpus_per_task": "1",
+    "export_env": "NONE",
+    "get_user_env": "1",
+    "gpus_on_node": "1",
+    "gtids": "0",
+    "job_account": "cuuser_smithmc_future_computing_technologies",
+    "job_cpus_per_node": "16",
+    "job_end_time": "1750914494",
+    "job_gid": "10000",
+    "job_gpus": "1",
+    "job_id": "3828671",
+    "job_name": "ood_jupyter",
+    "job_nodelist": "node0035",
+    "job_num_nodes": "1",
+    "job_partition": "interact",
+    "job_qos": "normal",
+    "job_start_time": "1750907294",
+    "job_uid": "485948",
+    "job_user": "aniemcz",
+    "jobid": "3828671",
+    "localid": "0",
+    "mem_per_node": "65536",
+    "nnodes": "1",
+    "nodeid": "0",
+    "nodelist": "node0035",
+    "nprocs": "16",
+    "ntasks": "16",
+    "ntasks_per_node": "16",
+    "oom_kill_step": "0",
+    "prio_process": "0",
+    "procid": "0",
+    "script_context": "prolog_task",
+    "stepmgr": "node0035",
+    "submit_dir": "/var/www/ood/apps/sys/dashboard",
+    "submit_host": "vm-slurm-p-openod.palmetto.clemson.edu",
+    "task_pid": "1990529",
+    "tasks_per_node": "16",
+    "topology_addr": "ndrspine[1-2].hdrspine[1-2].hdrleaf1.node0035",
+    "topology_addr_pattern": "switch.switch.switch.node",
+    "tres_per_task": "cpu=1"
+  },
+  "cudaVersion": "12.4"
+}

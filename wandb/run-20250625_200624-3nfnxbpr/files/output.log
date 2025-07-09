@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/aniemcz/gooseReno/RENO/train.py", line 70, in <module>
+    raise Exception("ERROR: no files found at glob path")
+Exception: ERROR: no files found at glob path
+Traceback (most recent call last):
+  File "/home/aniemcz/gooseReno/RENO/train.py", line 70, in <module>
+    raise Exception("ERROR: no files found at glob path")
+Exception: ERROR: no files found at glob path

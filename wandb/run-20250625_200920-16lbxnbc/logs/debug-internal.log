@@ -1,0 +1,15 @@
+{"time":"2025-06-25T20:09:20.496671707-04:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/aniemcz/gooseReno/wandb/run-20250625_200920-16lbxnbc/logs/debug-core.log"}
+{"time":"2025-06-25T20:09:20.738405224-04:00","level":"INFO","msg":"stream: created new stream","id":"16lbxnbc"}
+{"time":"2025-06-25T20:09:20.738424964-04:00","level":"INFO","msg":"stream: started","id":"16lbxnbc"}
+{"time":"2025-06-25T20:09:20.738427768-04:00","level":"INFO","msg":"handler: started","stream_id":"16lbxnbc"}
+{"time":"2025-06-25T20:09:20.738450734-04:00","level":"INFO","msg":"sender: started","stream_id":"16lbxnbc"}
+{"time":"2025-06-25T20:09:20.738461812-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"16lbxnbc"}
+{"time":"2025-06-25T20:09:20.923498804-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-25T20:09:22.252333737-04:00","level":"INFO","msg":"stream: closing","id":"16lbxnbc"}
+{"time":"2025-06-25T20:09:22.252347775-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-25T20:09:22.252428853-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-25T20:09:22.652092794-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-25T20:09:22.777642417-04:00","level":"INFO","msg":"handler: closed","stream_id":"16lbxnbc"}
+{"time":"2025-06-25T20:09:22.777651907-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"16lbxnbc"}
+{"time":"2025-06-25T20:09:22.777680216-04:00","level":"INFO","msg":"sender: closed","stream_id":"16lbxnbc"}
+{"time":"2025-06-25T20:09:22.779396211-04:00","level":"INFO","msg":"stream: closed","id":"16lbxnbc"}

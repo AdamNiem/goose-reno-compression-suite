@@ -1,0 +1,15 @@
+{"time":"2025-06-25T23:09:35.727755052-04:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/aniemcz/gooseReno/wandb/run-20250625_230934-9775bsyv/logs/debug-core.log"}
+{"time":"2025-06-25T23:09:36.118194626-04:00","level":"INFO","msg":"stream: created new stream","id":"9775bsyv"}
+{"time":"2025-06-25T23:09:36.118218152-04:00","level":"INFO","msg":"stream: started","id":"9775bsyv"}
+{"time":"2025-06-25T23:09:36.118290893-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"9775bsyv"}
+{"time":"2025-06-25T23:09:36.118361863-04:00","level":"INFO","msg":"sender: started","stream_id":"9775bsyv"}
+{"time":"2025-06-25T23:09:36.118391548-04:00","level":"INFO","msg":"handler: started","stream_id":"9775bsyv"}
+{"time":"2025-06-25T23:09:36.330865552-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-25T23:17:08.94595315-04:00","level":"INFO","msg":"stream: closing","id":"9775bsyv"}
+{"time":"2025-06-25T23:17:08.948020504-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-25T23:17:08.948048379-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-25T23:17:09.414332868-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-25T23:17:09.541502235-04:00","level":"INFO","msg":"handler: closed","stream_id":"9775bsyv"}
+{"time":"2025-06-25T23:17:09.541540087-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"9775bsyv"}
+{"time":"2025-06-25T23:17:09.541568819-04:00","level":"INFO","msg":"sender: closed","stream_id":"9775bsyv"}
+{"time":"2025-06-25T23:17:09.544001684-04:00","level":"INFO","msg":"stream: closed","id":"9775bsyv"}

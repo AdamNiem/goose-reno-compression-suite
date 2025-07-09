@@ -1,0 +1,48 @@
+_wandb:
+    value:
+        cli_version: 0.20.1
+        m: []
+        python_version: 3.10.14
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 13
+                - 16
+                - 55
+            "4": 3.10.14
+            "5": 0.20.1
+            "8":
+                - 2
+            "12": 0.20.1
+            "13": linux-x86_64
+batch_size:
+    value: 1
+channels:
+    value: 32
+is_data_pre_quantized:
+    value: false
+kernel_size:
+    value: 3
+learning_rate:
+    value: 0.0005
+lr_decay:
+    value: 0.1
+lr_decay_steps:
+    value:
+        - 100000
+        - 150000
+max_steps:
+    value: 170000
+model_save_folder:
+    value: /scratch/aniemcz/renoGooseModels/goose
+training_data:
+    value: /scratch/aniemcz/goose-reno/train/*.bin
+valid_samples:
+    value: ""

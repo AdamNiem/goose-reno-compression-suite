@@ -1,0 +1,15 @@
+{"time":"2025-06-25T23:18:15.819843833-04:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/aniemcz/gooseReno/wandb/run-20250625_231815-pg6fa4cp/logs/debug-core.log"}
+{"time":"2025-06-25T23:18:16.051247201-04:00","level":"INFO","msg":"stream: created new stream","id":"pg6fa4cp"}
+{"time":"2025-06-25T23:18:16.05127115-04:00","level":"INFO","msg":"stream: started","id":"pg6fa4cp"}
+{"time":"2025-06-25T23:18:16.051286485-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"pg6fa4cp"}
+{"time":"2025-06-25T23:18:16.051352846-04:00","level":"INFO","msg":"handler: started","stream_id":"pg6fa4cp"}
+{"time":"2025-06-25T23:18:16.051360578-04:00","level":"INFO","msg":"sender: started","stream_id":"pg6fa4cp"}
+{"time":"2025-06-25T23:18:16.182878549-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-25T23:27:26.463480409-04:00","level":"INFO","msg":"stream: closing","id":"pg6fa4cp"}
+{"time":"2025-06-25T23:27:26.46352035-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-25T23:27:26.464127087-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-25T23:27:26.943848929-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-25T23:27:27.098602906-04:00","level":"INFO","msg":"handler: closed","stream_id":"pg6fa4cp"}
+{"time":"2025-06-25T23:27:27.098629797-04:00","level":"INFO","msg":"sender: closed","stream_id":"pg6fa4cp"}
+{"time":"2025-06-25T23:27:27.098617535-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"pg6fa4cp"}
+{"time":"2025-06-25T23:27:27.102338058-04:00","level":"INFO","msg":"stream: closed","id":"pg6fa4cp"}
