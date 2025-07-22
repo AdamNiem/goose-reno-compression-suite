@@ -7,8 +7,7 @@ echo "TMC13: XYZ + NORMALS COMPRESSION\n\n"
 ${tmc3} \
   --mode=0 \
   --config=gpcc.cfg \
-  --positionQuantizationScale=0.0001 \
-  --maxNumQtBtBeforeOt=32 \
+  --positionQuantizationScale=0.0668 \
   --uncompressedDataPath=${data_path} \
   --compressedStreamPath=./hahaComp.bin
   

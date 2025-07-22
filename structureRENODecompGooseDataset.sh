@@ -8,18 +8,34 @@ cd /scratch/aniemcz/goose-pointcept/
 
 cp -r reno_compression_results/ reno_decompressed_lidar
 cd reno_decompressed_lidar
-mv train/Q_512/decompressed Q_512/train
-mv train/Q_64/decompressed Q_64/train
-mv train/Q_8/decompressed Q_8/train
-mv trainEx/Q_512/decompressed Q_512/trainEx
-mv trainEx/Q_64/decompressed Q_64/trainEx
-mv trainEx/Q_8/decompressed Q_8/trainEx
-mv val/Q_512/decompressed Q_512/val
-mv val/Q_64/decompressed Q_64/val
-mv val/Q_8/decompressed Q_8/val
-mv valEx/Q_512/decompressed Q_512/valEx
-mv valEx/Q_64/decompressed Q_64/valEx
-mv valEx/Q_8/decompressed Q_8/valEx
+
+mkdir -p Q_512/train
+mkdir -p Q_512/trainEx
+mkdir -p Q_512/val
+mkdir -p Q_512/valEx
+
+mkdir -p Q_64/train
+mkdir -p Q_64/trainEx
+mkdir -p Q_64/val
+mkdir -p Q_64/valEx
+
+mkdir -p Q_8/train
+mkdir -p Q_8/trainEx
+mkdir -p Q_8/val
+mkdir -p Q_8/valEx
+
+mv train/Q_512/decompressed/* Q_512/train
+mv train/Q_64/decompressed/* Q_64/train
+mv train/Q_8/decompressed/* Q_8/train
+mv trainEx/Q_512/decompressed/* Q_512/trainEx
+mv trainEx/Q_64/decompressed/* Q_64/trainEx
+mv trainEx/Q_8/decompressed/* Q_8/trainEx
+mv val/Q_512/decompressed/* Q_512/val
+mv val/Q_64/decompressed/* Q_64/val
+mv val/Q_8/decompressed/* Q_8/val
+mv valEx/Q_512/decompressed/* Q_512/valEx
+mv valEx/Q_64/decompressed/* Q_64/valEx
+mv valEx/Q_8/decompressed/* Q_8/valEx
 rm -r valEx trainEx train val
 
 

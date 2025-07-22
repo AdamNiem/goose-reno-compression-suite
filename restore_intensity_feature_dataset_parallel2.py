@@ -44,7 +44,7 @@ def read_bin_xyz_intensity(bin_path: Path):
 
 
 def convert_intensity_nn(args):
-    ply_path, ply_root, orig_bin_root, out_bin_root, threshold = args
+    ply_path, ply_root, orig_bin_root, out_bin_root, threshold, no_threshold = args
     rel = ply_path.relative_to(ply_root).with_suffix('.bin')
     orig_bin = orig_bin_root / rel
     out_bin = out_bin_root / rel
@@ -70,9 +70,10 @@ def convert_intensity_nn(args):
         except RuntimeError:
             raise RuntimeError(f"KD-tree lookup failed for point index {idx} in {ply_path}")
          
-        dist = np.sqrt(dists[0])
-        if dist > threshold:
-            raise ValueError(f"No original point within {threshold} for {ply_path} point index {idx} (dist={dist})")
+        if not no_threshold:
+            dist = np.sqrt(dists[0])
+            if dist > threshold:
+                raise ValueError(f"No original point within {threshold} for {ply_path} point index {idx} (dist={dist})")
         recovered_i[idx] = intensity_orig[idxs[0]]
 
     # Merge and write
@@ -93,6 +94,8 @@ def main():
                         help='Output root for merged BINs')
     parser.add_argument('--threshold', '-t', type=float, default=0.01,
                         help='Distance threshold for NN matching')
+    parser.add_argument('--no_threshold', '-s', action='store_true',
+                        help='If specified then turns off threshold sanity check')
     parser.add_argument('--num_workers', '-n', type=int, default=os.cpu_count(),
                         help='Parallel worker count')
     args = parser.parse_args()
@@ -101,6 +104,7 @@ def main():
     orig_bin_root = Path(args.orig_bin_root)
     out_bin_root = Path(args.out_bin_root)
     threshold = args.threshold
+    no_threshold = args.no_threshold
     num_workers = args.num_workers
 
     # Gather PLY files
@@ -108,7 +112,7 @@ def main():
     print(f"Found {len(ply_files)} PLY files under {ply_root}")
 
     # Prepare tasks
-    tasks = [(p, ply_root, orig_bin_root, out_bin_root, threshold) for p in ply_files]
+    tasks = [(p, ply_root, orig_bin_root, out_bin_root, threshold, no_threshold) for p in ply_files]
 
     # Parallel processing
     with Pool(processes=num_workers) as pool:

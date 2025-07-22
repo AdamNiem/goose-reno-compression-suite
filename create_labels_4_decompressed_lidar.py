@@ -50,7 +50,7 @@ def read_label(label_path: Path):
 
 
 def convert_labels_nn(args):
-    decomp_bin_path, decomp_bin_root, orig_bin_root, orig_label_root, out_label_root, threshold = args
+    decomp_bin_path, decomp_bin_root, orig_bin_root, orig_label_root, out_label_root, threshold, no_threshold = args
     rel = decomp_bin_path.relative_to(decomp_bin_root)
     
     # Replace `_vls128` with `_goose` in the filename (keep the directory structure)
@@ -87,9 +87,10 @@ def convert_labels_nn(args):
     inst_rec = np.empty((xyz_dec.shape[0],), dtype=np.uint32)
     for i, pt in enumerate(xyz_dec):
         [_, idxs, dists] = tree.search_knn_vector_3d(pt, 1)
-        dist = np.sqrt(dists[0])
-        if dist > threshold:
-            raise ValueError(f"No original point within {threshold}m for {decomp_bin_path} index {i} (dist={dist})")
+        if not no_threshold:
+            dist = np.sqrt(dists[0])
+            if dist > threshold:
+                raise ValueError(f"No original point within {threshold}m for {decomp_bin_path} index {i} (dist={dist})")
         idx0 = idxs[0]
         sem_rec[i] = sem_orig[idx0]
         inst_rec[i] = inst_orig[idx0]
@@ -114,6 +115,8 @@ def main():
                         help='Output root for restored LABELs')
     parser.add_argument('--threshold', '-t', type=float, default=0.01,
                         help='Max distance (m) to match nearest point')
+    parser.add_argument('--no_threshold', '-s', action='store_true',
+                        help='If specified then turns off threshold sanity check')
     parser.add_argument('--num_workers', '-n', type=int, default=os.cpu_count(),
                         help='Parallel worker count')
     args = parser.parse_args()
@@ -123,11 +126,12 @@ def main():
     orig_label_root = Path(args.orig_label_root)
     out_label_root = Path(args.out_label_root)
     threshold = args.threshold
+    no_threshold = args.no_threshold
     num_workers = args.num_workers
 
     decomp_bin_files = list(decomp_bin_root.rglob('*.bin'))
     print(f"Found {len(decomp_bin_files)} decomp bin files under {decomp_bin_root}")
-    tasks = [(p, decomp_bin_root, orig_bin_root, orig_label_root, out_label_root, threshold) for p in decomp_bin_files]
+    tasks = [(p, decomp_bin_root, orig_bin_root, orig_label_root, out_label_root, threshold, no_threshold) for p in decomp_bin_files]
 
     with Pool(processes=num_workers) as pool:
         for out in tqdm(pool.imap(convert_labels_nn, tasks), total=len(tasks), desc="Restoring labels NN"):

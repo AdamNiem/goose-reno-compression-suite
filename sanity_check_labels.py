@@ -6,7 +6,8 @@ import sys
 
 np.set_printoptions(threshold=sys.maxsize)
 
-labels_path = "/scratch/aniemcz/gooseChallengeLabelsCleanMapped"
+#labels_path = "/scratch/aniemcz/gooseChallengeLabelsCleanMapped"
+labels_path = "/scratch/aniemcz/goose-pointcept-decomp-bin/reno/Q_8/labels_challenge"
 
 unique_labels = np.array([])
 
